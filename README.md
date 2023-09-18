@@ -4,5 +4,5 @@
 3. `go run main.go`
 
 ### Reference
-- [Videos](https://www.youtube.com/watch?v=V1n95q2dIbc&list=PLavQwENTsEBXDV2ATrm_xe0Fju1_D0f_q)
+- [a Tour of Go](https://go-tour-jp.appspot.com/list)
 - [Docker](https://www.engilaboo.com/go-docker/)
