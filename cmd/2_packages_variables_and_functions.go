@@ -2,14 +2,11 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
 	"math"
 )
 
 func main() {
-	fmt.Println("Hello")
-	fmt.Println("Current time is", time.Now())
 	fmt.Println("Random number is", rand.Intn(100))
 	fmt.Println(math.Pi)
 	fmt.Println(add(2, 3))
