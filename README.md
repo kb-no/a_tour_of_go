@@ -6,3 +6,4 @@
 ### Reference
 - [a Tour of Go](https://go-tour-jp.appspot.com/list)
 - [Docker](https://www.engilaboo.com/go-docker/)
+- [What's pointer](https://www.youtube.com/watch?v=Kh45nqpgPoc)
