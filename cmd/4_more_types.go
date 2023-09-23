@@ -104,5 +104,29 @@ func main() {
 	fmt.Println(k)
 
 	// Slice length and capacity
-	
+	sa := []int{2, 3, 5, 7, 11, 13}
+	printSlice(sa)
+
+	// Slice the slice to give it zero length.
+	sa = sa[:0]
+	printSlice(sa)
+
+	// Extend its length.
+	sa = sa[:4]
+	printSlice(sa)
+
+	// Drop its first two values.
+	sa = sa[2:]
+	printSlice(sa)
+
+	// Nil slices
+	var ss []int
+	fmt.Println(ss, len(ss), cap(ss))
+	if ss == nil {
+		fmt.Println("nil!")
+	}
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
