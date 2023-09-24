@@ -1,6 +1,7 @@
 package main
 import (
 	"fmt"
+	"strings"
 )
 
 type Struct struct {
@@ -50,7 +51,7 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
 
-	// Slice
+	// Slice ※スライスとは可変長の配列のこと
 	var s []int = primes[1:4]
 	fmt.Println(s)
 
@@ -103,7 +104,7 @@ func main() {
 	k = k[1:]
 	fmt.Println(k)
 
-	// Slice length and capacity
+	// Slice length and capacity ※キャパシティとはそのスライスが保持できる要素数の最大値
 	sa := []int{2, 3, 5, 7, 11, 13}
 	printSlice(sa)
 
@@ -125,8 +126,57 @@ func main() {
 	if ss == nil {
 		fmt.Println("nil!")
 	}
+
+	// Creating a slice with make
+	e := make([]int, 5)
+	printSlice2("e", e)
+
+	f := make([]int, 0, 5)
+	printSlice2("f", f)
+
+	g := f[:2]
+	printSlice2("g", g)
+
+	h := g[2:5]
+	printSlice2("h", h)
+
+	// Slices of slices
+	// Create a tic-tac-toe board.
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	}
+
+	// The players take turns.
+	board[0][0] = "X"
+	board[2][2] = "O"
+	board[1][2] = "X"
+	board[1][0] = "O"
+	board[0][2] = "X"
+
+	for i := 0; i < len(board); i++ {
+		fmt.Printf("%s\n", strings.Join(board[i], " "))
+	}
+
+	// Appending to a slice
+	var as []int
+	printSlice(as)
+	// append works on nil slices.
+	as = append(as, 0)
+	printSlice(as)
+	// The slice grows as needed.
+	as = append(as, 1)
+	printSlice(as)
+	// We can add more than one element at a time.
+	as = append(as, 2, 3, 4)
+	printSlice(as)
 }
 
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+func printSlice2(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
 }
