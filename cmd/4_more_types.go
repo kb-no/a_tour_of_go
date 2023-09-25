@@ -171,6 +171,67 @@ func main() {
 	// We can add more than one element at a time.
 	as = append(as, 2, 3, 4)
 	printSlice(as)
+
+	// Range
+	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+	for i, v := range pow { // rangeというキーワード
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+
+	// Range continued
+	pow2 := make([]int, 10)
+	for i := range pow2 {
+		pow2[i] = 1 << uint(i) // == 2**i
+	}
+	for _, value := range pow2 { // _で省略可能
+		fmt.Printf("%d\n", value)
+	}
+
+	// Maps
+	type Vertex struct {
+		Lat, Long float64
+	}
+
+	var m map[string]Vertex
+
+	m = make(map[string]Vertex)
+	m["Bell Labs"] = Vertex{
+		40.68433, -74.39967,
+	}
+	fmt.Println(m["Bell Labs"])
+
+	// Map literals
+	var n map[string]Vertex
+	n = map[string]Vertex{
+		"Bell Labs": Vertex{
+			40.68433, -74.39967,
+		},
+		"Google": Vertex{
+			37.42202, -122.08408,
+		},
+	}
+
+	fmt.Println(n)
+
+	// Map literals continued
+	// mapに渡すトップレベルの型が単純な型名である場合は、リテラルの要素から推定できるので省略可能
+	o := map[string]Vertex{"Bell Labs": {40.68433, -74.39967}, "Google": {37.42202, -122.08408}}
+	fmt.Println(o)
+
+	// Mutating Maps
+	u := make(map[string]int)
+
+	u["Answer"] = 42
+	fmt.Println("The value:", u["Answer"])
+
+	u["Answer"] = 48
+	fmt.Println("The value:", u["Answer"])
+
+	delete(u, "Answer")
+	fmt.Println("The value:", u["Answer"])
+
+	w, ok := u["Answer"] // okを入れる理由は、キーがもともと存在していたのか消されたのかを確認するため
+	fmt.Println("The value:", w, "Present?", ok)
 }
 
 func printSlice(s []int) {
