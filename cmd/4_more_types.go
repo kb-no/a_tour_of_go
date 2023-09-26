@@ -2,6 +2,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"math"
 )
 
 type Struct struct {
@@ -232,6 +233,25 @@ func main() {
 
 	w, ok := u["Answer"] // okを入れる理由は、キーがもともと存在していたのか消されたのかを確認するため
 	fmt.Println("The value:", w, "Present?", ok)
+
+	// Function values
+	// 関数も変数みたいに扱える
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+
+	// Function closures
+	pos, neg := adder(), adder() // 1回目のadder()と2回目のadder()はそれぞれ違うメモリのsumを参照している
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
 }
 
 func printSlice(s []int) {
@@ -240,4 +260,17 @@ func printSlice(s []int) {
 
 func printSlice2(s string, x []int) {
 	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
+}
+
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func adder() func(int) int {
+	sum := 0 // 通常このsumは関数が終了するとメモリから解放されるがreturnで外部に持っていっているので消えない
+	return func(x int) int {
+		sum += x
+		fmt.Println(&sum)
+		return sum
+	}
 }
