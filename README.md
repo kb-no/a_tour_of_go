@@ -12,3 +12,4 @@
 - [explanation of 4_more_types.go 1](https://www.youtube.com/watch?v=YHzKLJMghqY&list=PLGqNraLKYNVdms74BI2pP2TMJI-K_7D9p&index=5)
 - [explanation of 4_more_types.go 2](https://www.youtube.com/watch?v=htJXUu0GL3w&list=PLGqNraLKYNVdms74BI2pP2TMJI-K_7D9p&index=6)
 - [explanation of 4_more_types.go 3](https://www.youtube.com/watch?v=htJXUu0GL3w&list=PLGqNraLKYNVdms74BI2pP2TMJI-K_7D9p&index=7)
+- [explanation of 5_methods_and_interfaces.go](https://www.youtube.com/watch?v=htJXUu0GL3w&list=PLGqNraLKYNVdms74BI2pP2TMJI-K_7D9p&index=8)
