@@ -7,4 +7,5 @@
 - [a Tour of Go](https://go-tour-jp.appspot.com/list)
 - [Docker](https://www.engilaboo.com/go-docker/)
 - [What's pointer](https://www.youtube.com/watch?v=Kh45nqpgPoc)
-- [explanation video](https://www.youtube.com/watch?v=a9bQQDX1Ssk&list=PLGqNraLKYNVdms74BI2pP2TMJI-K_7D9p&index=2)
+- [explanation video](https://www.youtube.com/watch?v=a9bQQDX1Ssk)
+- [explanation video](https://www.youtube.com/watch?v=ko5E0pjSL6M)
