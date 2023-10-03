@@ -25,12 +25,12 @@ import (
 func main() {
 	i, j := 42, 2701
 
-	p := &i         // p is a pointer to i
-	fmt.Println(*p)
-	*p = 21
+	p := &i         // iのメモリアドレスをpへ格納
+	fmt.Println(*p) // ポインタの変数に*を付けるとそのポインタに格納されている値を参照できる
+	*p = 21         // ポインタを通してiへ21を代入
 	fmt.Println(i)
 
-	p = &j         // p is a pointer to j
-	*p = *p / 37   // same as (*p) / 37
+	p = &j         // jのメモリアドレスをpへ格納
+	*p = *p / 37   // ポインタを通してjの値を参照し、37で割る
 	fmt.Println(j)
 }
