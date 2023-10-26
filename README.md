@@ -1,7 +1,7 @@
 ### How to build
 1. `docker compose up -d`
 2. `docker compose exec go sh`
-3. `go run main.go`
+3. `go run cmd/ ~` ※ Specify an arbitrary file
 
 ### Reference
 - [a Tour of Go](https://go-tour-jp.appspot.com/list)
