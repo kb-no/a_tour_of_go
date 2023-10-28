@@ -4,9 +4,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var i int = 42
 var j int = 100

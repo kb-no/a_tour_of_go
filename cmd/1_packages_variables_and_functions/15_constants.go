@@ -4,9 +4,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 const Pi = 3.14 // constは:=で書くことができない。つまり:=の場合は必ず変数ということ。
 

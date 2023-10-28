@@ -12,9 +12,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	v := 42 // change me!

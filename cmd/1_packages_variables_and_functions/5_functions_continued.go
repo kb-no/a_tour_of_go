@@ -2,9 +2,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func add(x, y int) int { // ← (x int, y int)の省略
 	return x + y
