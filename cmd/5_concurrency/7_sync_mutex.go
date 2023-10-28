@@ -14,9 +14,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Fetcher interface {
 	// Fetch returns the body of URL and

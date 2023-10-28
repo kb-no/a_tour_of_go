@@ -18,9 +18,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	i, j := 42, 2701

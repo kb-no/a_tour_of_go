@@ -5,9 +5,7 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var c, python, java bool // Goの場合は初期値を与えなくても初期値が型によって決められている（ゼロ値）。boolはfalse。
 
