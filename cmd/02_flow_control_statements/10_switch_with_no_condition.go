@@ -10,7 +10,8 @@ import (
 )
 
 func main() {
-	t := time.Now()
+	jst := time.FixedZone("JST", 9*60*60)
+	t := time.Now().In(jst)
 	switch {
 	case t.Hour() < 12:
 		fmt.Println("Good morning!")
