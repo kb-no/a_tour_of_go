@@ -1,5 +1,5 @@
 # alpineは軽量に動作するので今回は採用
-FROM golang:1.14.1-alpine
+FROM golang:1.21-alpine
 
 # alpineはGitやVim等のオプションツールは入っていないのでインストール
 # 改行しないとエラーになる
