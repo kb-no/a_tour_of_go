@@ -3,32 +3,38 @@
 @contentType = application/json
 
 ### GET リクエスト
-GET {{baseUrl}}/sample
+GET {{baseUrl}}/v1/users
 Accept: {{contentType}}
 
 ### GET リクエスト (ID指定)
 # GET {{baseUrl}}/users/123
 # Accept: {{contentType}}
 
-# ### POST リクエスト
-# POST {{baseUrl}}/users
-# Content-Type: {{contentType}}
+### GET リクエスト　（クエリパラメータ）
+GET {{baseUrl}}/goods?category=book
+Accept: {{contentType}}
 
-# {
-#     "name": "山田太郎",
-#     "email": "yamada@example.com",
-#     "age": 30
-# }
+### GET リクエスト　（リダイレクト）
+GET {{baseUrl}}/about
+Accept: {{contentType}}
 
-# ### PUT リクエスト
-# PUT {{baseUrl}}/users/123
-# Content-Type: {{contentType}}
+### POST リクエスト
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
 
-# {
-#     "name": "山田花子",
-#     "email": "hanako@example.com",
-#     "age": 25
-# }
+{
+    "name": "山田太郎",
+    "age": 30
+}
 
-# ### DELETE リクエスト
-# DELETE {{baseUrl}}/users/123
+### PUT リクエスト
+PUT {{baseUrl}}/users/123
+Content-Type: {{contentType}}
+
+{
+    "name": "山田花子",
+    "age": 25
+}
+
+### DELETE リクエスト
+DELETE {{baseUrl}}/users/123
